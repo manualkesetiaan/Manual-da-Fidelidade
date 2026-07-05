@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'SEU_PIXEL_ID_AQUI');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
+  /></noscript>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubra o Nível de Risco de Infidelidade do Seu Relacionamento</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red-ferrari: #E8000D;
+      --white: #FFFFFF;
+      --yellow: #FFD700;
+      --black: #0A0A0A;
+      --gray-light: #F4F4F4;
+      --gray-border: #D1D1D1;
+      --pink: #E0115F;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.55;
+      font-weight: 500;
+      overflow-x: hidden;
+    }
+    .app-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+    .app-container {
+      width: 100%;
+      max-width: 520px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .alert-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--red-ferrari);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 1.3;
+      padding: 10px 15px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 3px solid var(--black);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .progress-bar-container {
+      position: fixed;
+      top: 52px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: var(--gray-light);
+      z-index: 999;
+      border-bottom: 1px solid var(--gray-border);
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: var(--red-ferrari);
+      width: 8.3%;
+      transition: width 0.4s cubic-bezier(0.1, 0.8, 0.3, 1);
+    }
+    .counter-widget {
+      align-self: center;
+      background-color: var(--black);
+      border: 2px solid var(--yellow);
+      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      box-shadow: 3px 3px 0px var(--black);
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #1ED760;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #1ED760;
+      animation: pulse-glow 1.8s infinite;
+    }
+    .counter-text {
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .counter-number {
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.15;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #333333;
+      text-align: center;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .badges-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    .badge-card {
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      box-shadow: 3px 3px 0px var(--black);
+      padding: 14px 16px;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--black);
+    }
+    .badge-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .btn-action {
+      display: block;
+      width: 100%;
+      background-color: var(--red-ferrari);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 18px 24px;
+      border: 3px solid var(--black);
+      box-shadow: 4px 4px 0px var(--black);
+      cursor: pointer;
+      transition: all 0.1s ease;
+      letter-spacing: 0.5px;
+      margin-top: 20px;
+      outline: none;
+    }
+    .btn-action:hover {
+      background-color: var(--black);
+      color: var(--yellow);
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--black);
+    }
+    .btn-action:active {
+      transform: translate(4px, 4px);
+      box-shadow: 0px 0px 0px var(--black);
+    }
+    .question-title {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      color: var(--black);
+      border-left: 5px solid var(--red-ferrari);
+      padding-left: 12px;
+    }
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option-button {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      background-color: var(--white);
+      color: var(--black);
+      border: 2px solid var(--black);
+      box-shadow: 3px 3px 0px var(--black);
+      padding: 16px 20px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      outline: none;
+    }
+    .option-button:hover {
+      background-color: var(--black);
+      color: var(--yellow);
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0px var(--black);
+    }
+    .option-button.clicked {
+      background-color: var(--red-ferrari);
+      color: var(--white);
+      border-color: var(--black);
+    }
+    .break-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .break-stat-card {
+      background-color: var(--black);
+      color: var(--white);
+      border-left: 6px solid var(--red-ferrari);
+      padding: 20px;
+      box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+    .break-stat-text {
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    .break-quote {
+      font-size: 15px;
+      font-style: italic;
+      color: #555555;
+      border-left: 3px solid var(--gray-border);
+      padding-left: 15px;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .loader-title {
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--black);
+    }
+    .loader-progress-bar {
+      width: 100%;
+      height: 12px;
+      background-color: var(--gray-light);
+      border: 2px solid var(--black);
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .loader-progress-fill {
+      height: 100%;
+      background-color: var(--red-ferrari);
+      width: 0%;
+      transition: width 0.8s ease-in-out;
+    }
+    .loader-status-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .loader-status-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #777777;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease;
+    }
+    .loader-status-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .loader-status-item.active {
+      color: var(--black);
+    }
+    .loader-spinner {
+      width: 16px;
+      height: 16px;
+      border: 3px solid var(--gray-border);
+      border-top: 3px solid var(--red-ferrari);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .loader-check {
+      color: #1ED760;
+      font-weight: 900;
+      font-size: 16px;
+    }
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 10, 10, 0.9);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-card {
+      background-color: var(--white);
+      border: 4px solid var(--red-ferrari);
+      box-shadow: 6px 6px 0px var(--black);
+      width: 100%;
+      max-width: 440px;
+      padding: 30px 24px;
+      animation: modal-enter 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    .modal-question {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.35;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .result-container {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: left;
+    }
+    .result-title {
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    .result-paragraph {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #1A1A1A;
+    }
+    .result-subhead {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--red-ferrari);
+      margin-top: 10px;
+      border-bottom: 2px solid var(--black);
+      padding-bottom: 4px;
+    }
+    .highlight-yellow {
+      background-color: var(--yellow);
+      color: var(--black);
+      font-weight: 700;
+      padding: 2px 4px;
+    }
+    .screen {
+      display: none;
+      animation: screen-fade-in 0.4s ease forwards;
+    }
+    .screen.active {
+      display: block;
+    }
+    .pulse-btn {
+      animation: cta-pulse-anim 1.8s infinite ease-in-out;
+    }
+    @keyframes cta-pulse-anim {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 6px #1ED760; }
+      50% { transform: scale(1.15); box-shadow: 0 0 12px #1ED760; }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes screen-fade-in {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes modal-enter {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @media (min-width: 768px) {
+      .app-wrapper {
+        padding-top: 120px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      .question-title {
+        font-size: 22px;
+      }
+      .option-button {
+        font-size: 17px;
+        padding: 18px 24px;
+      }
+      .btn-action {
+        font-size: 20px;
+        padding: 20px 28px;
+      }
+      .result-title {
+        font-size: 26px;
+      }
+      .result-paragraph {
+        font-size: 16px;
+      }
+    }
+
+    .tsl-wrapper {
+      min-height: 100vh;
+      background: var(--white);
+      color: var(--black);
+      padding: 20px 0 56px;
+    }
+    .tsl-container {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    .tsl-reservation-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: calc(100% + 36px);
+      margin: -20px -18px 22px;
+      padding: 12px 16px;
+      background: var(--black);
+      color: var(--white);
+      border-bottom: 4px solid var(--red-ferrari);
+      box-shadow: 0 6px 0 rgba(10, 10, 10, 0.15);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .tsl-reservation-bar strong {
+      display: inline-flex;
+      min-width: 78px;
+      justify-content: center;
+      background: var(--yellow);
+      color: var(--black);
+      border: 2px solid var(--red-ferrari);
+      padding: 4px 8px;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .tsl-block {
+      margin: 0 0 18px;
+    }
+    .tsl-block p,
+    .tsl-list-line p {
+      font-size: 17px;
+      line-height: 1.62;
+      color: #141414;
+      font-weight: 500;
+    }
+    .tsl-block strong,
+    .tsl-list-line strong {
+      font-weight: 900;
+    }
+    .tsl-block em {
+      font-style: italic;
+    }
+    .tsl-alert-copy {
+      background: var(--black);
+      color: var(--white);
+      border: 3px solid var(--red-ferrari);
+      box-shadow: 5px 5px 0 var(--red-ferrari);
+      padding: 18px;
+      margin-bottom: 22px;
+    }
+    .tsl-alert-copy p {
+      color: var(--white);
+      font-size: 19px;
+      line-height: 1.38;
+      font-weight: 700;
+    }
+    .tsl-qualification {
+      background: var(--yellow);
+      color: var(--black);
+      border: 3px solid var(--black);
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    .tsl-qualification p {
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .tsl-headline,
+    .tsl-subheadline {
+      margin: 26px 0 14px;
+      color: var(--black);
+      line-height: 1.12;
+      letter-spacing: -0.5px;
+      text-transform: none;
+    }
+    .tsl-headline {
+      font-size: 28px;
+      font-weight: 900;
+      border-left: 7px solid var(--red-ferrari);
+      padding-left: 12px;
+    }
+    .tsl-product-figure {
+      margin: 26px 0 28px;
+      background: transparent;
+    }
+    .tsl-product-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .tsl-price {
+      margin: 16px 0 18px;
+      text-align: center;
+    }
+    .tsl-price p {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      border: 4px solid var(--black);
+      box-shadow: 5px 5px 0 var(--red-ferrari);
+      padding: 12px 22px;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .tsl-list-line {
+      background: #fff7c9;
+      border-left: 5px solid var(--red-ferrari);
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .faq-block {
+      border: 2px solid var(--black);
+      box-shadow: 3px 3px 0px var(--black);
+      background-color: var(--gray-light);
+      margin-top: 15px;
+    }
+    .faq-question-box {
+      background-color: var(--yellow);
+      color: var(--black);
+      padding: 16px 20px;
+      font-size: 17px;
+      font-weight: 800;
+      border-bottom: 2px solid var(--black);
+    }
+    .faq-answer-box {
+      padding: 16px 20px;
+      font-size: 17px;
+      line-height: 1.62;
+      background-color: var(--white);
+    }
+    @media (min-width: 768px) {
+      .tsl-wrapper { padding-bottom: 72px; }
+      .tsl-container { max-width: 640px; padding: 0 24px; }
+      .tsl-reservation-bar { width: calc(100% + 48px); margin-left: -24px; margin-right: -24px; }
+      .tsl-block p, .tsl-list-line p { font-size: 18px; }
+      .tsl-headline { font-size: 34px; }
+      .tsl-subheadline { font-size: 28px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="alert-bar" id="quizAlertBar">
+    Devido à alta demanda de acessos, restringimos o diagnóstico para apenas 10 mulheres sortudas, boa sorte.
+  </div>
+  <div class="progress-bar-container" id="quizProgressBarContainer">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+  <div class="app-wrapper">
+    <div class="app-container">
+      <div class="counter-widget" id="visitorWidget">
+        <div class="pulse-dot"></div>
+        <div class="counter-text">Acessos: <span class="counter-number" id="liveCounter">984</span></div>
+      </div>
+      <div class="screen active" id="screen-1">
+        <h1>Descubra o Nível de Risco de Infidelidade do Seu Relacionamento</h1>
+        <p class="subtitle">Um diagnóstico de 2 minutos, baseado no comportamento real de mais de 90 mil casais.</p>
+
+        <div class="badges-grid">
+          <div class="badge-card">
+            <span class="badge-icon">🎯</span>
+            <span>93% de Precisão Validada</span>
+          </div>
+          <div class="badge-card">
+            <span class="badge-icon">⏱</span>
+            <span>Teste de 2 minutos</span>
+          </div>
+          <div class="badge-card">
+            <span class="badge-icon">🔒</span>
+            <span>100% Confidencial</span>
+          </div>
+          <div class="badge-card">
+            <span class="badge-icon">📋</span>
+            <span>Resultado Personalizado</span>
+          </div>
+        </div>
+        <button class="btn-action" id="btn-start" onclick="nextScreen(2)">Iniciar Diagnóstico</button>
+      </div>
+      <div class="screen" id="screen-2">
+        <p class="question-title">Qual é a sua situação atual?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(2, 3)">
+            <span class="badge-icon">👩</span><span>Casada</span>
+          </button>
+          <button class="option-button" onclick="selectOption(2, 3)">
+            <span class="badge-icon">💑</span><span>Namorando ou morando junto</span>
+          </button>
+          <button class="option-button" onclick="selectOption(2, 3)">
+            <span class="badge-icon">💬</span><span>Ficando ou se relacionando sem rótulo</span>
+          </button>
+          <button class="option-button" onclick="selectOption(2, 3)">
+            <span class="badge-icon">❤️</span><span>Solteira, mas de olho em alguém</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-3">
+        <p class="question-title">Há quanto tempo vocês estão juntos?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(3, 4)">
+            <span>Menos de 1 ano</span>
+          </button>
+          <button class="option-button" onclick="selectOption(3, 4)">
+            <span>De 1 a 3 anos</span>
+          </button>
+          <button class="option-button" onclick="selectOption(3, 4)">
+            <span>De 3 a 10 anos</span>
+          </button>
+          <button class="option-button" onclick="selectOption(3, 4)">
+            <span>Mais de 10 anos</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-4">
+        <p class="question-title">Como está a intimidade entre vocês hoje, comparado ao começo da relação?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(4, 5)">
+            <span class="badge-icon">🔥</span><span>Ainda forte, mas sinto que pode esfriar</span>
+          </button>
+          <button class="option-button" onclick="selectOption(4, 5)">
+            <span class="badge-icon">✨</span><span>Caiu bastante, virou rotina</span>
+          </button>
+          <button class="option-button" onclick="selectOption(4, 5)">
+            <span class="badge-icon">❄️</span><span>Quase não existe mais</span>
+          </button>
+          <button class="option-button" onclick="selectOption(4, 5)">
+            <span class="badge-icon">🤔</span><span>Não sei dizer com certeza</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-5">
+        <div class="break-container">
+          <p class="question-title" style="margin-bottom: 0;">Antes de continuar, olha isso.</p>
+
+          <div class="break-stat-card">
+            <p class="break-stat-text">De cada 10 mulheres que respondem esse diagnóstico até aqui, 7 confirmam que sentem o parceiro mais distante do que estava há um ano.</p>
+          </div>
+          <p class="break-quote">
+            "Eu jurava que era só impressão minha. Até ver minha pontuação aqui." — J. Andrade, 29 anos
+          </p>
+          <button class="btn-action" onclick="nextScreen(6)">Continuar</button>
+        </div>
+      </div>
+      <div class="screen" id="screen-6">
+        <p class="question-title">Você já se comparou com outras mulheres que ele talvez já tenha visto, seja no celular dele ou na rua?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(6, 7)">
+            <span>Sim, com frequência</span>
+          </button>
+          <button class="option-button" onclick="selectOption(6, 7)">
+            <span>Já aconteceu algumas vezes</span>
+          </button>
+          <button class="option-button" onclick="selectOption(6, 7)">
+            <span>Nunca parei pra pensar nisso</span>
+          </button>
+          <button class="option-button" onclick="selectOption(6, 7)">
+            <span>Prefiro não responder</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-7">
+        <p class="question-title">Em algum momento, você já desconfiou que ele pudesse estar de olho, ou já interessado, em outra mulher?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(7, 8)">
+            <span>Sim, e isso me consome por dentro</span>
+          </button>
+          <button class="option-button" onclick="selectOption(7, 8)">
+            <span>Já tive uma suspeita, mas deixei passar</span>
+          </button>
+          <button class="option-button" onclick="selectOption(7, 8)">
+            <span>Nunca desconfiei, mas tenho medo que aconteça um dia</span>
+          </button>
+          <button class="option-button" onclick="selectOption(7, 8)">
+            <span>Confio cegamente nele</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-8">
+        <p class="question-title">Como ele costuma responder suas mensagens hoje em dia?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(8, 9)">
+            <span>Na hora, do mesmo jeito carinhoso de sempre</span>
+          </button>
+          <button class="option-button" onclick="selectOption(8, 9)">
+            <span>Demora, e quando responde é seco</span>
+          </button>
+          <button class="option-button" onclick="selectOption(8, 9)">
+            <span>Varia muito, às vezes atencioso, às vezes distante</span>
+          </button>
+          <button class="option-button" onclick="selectOption(8, 9)">
+            <span>Ele que costuma esperar eu responder primeiro</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-9">
+        <p class="question-title">Quando você pensa em tudo isso, o que mais pesa na sua cabeça?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(9, 10)">
+            <span>Acho que não sou boa o suficiente pra ele</span>
+          </button>
+          <button class="option-button" onclick="selectOption(9, 10)">
+            <span>Acho que é só uma fase, vai passar</span>
+          </button>
+          <button class="option-button" onclick="selectOption(9, 10)">
+            <span>Acho que ele nunca teria coragem de me trair</span>
+          </button>
+          <button class="option-button" onclick="selectOption(9, 10)">
+            <span>Prefiro nem pensar nisso</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-10">
+        <p class="question-title">Se você pudesse garantir uma única coisa pelo resto da vida com ele, qual seria?</p>
+        <div class="options-list">
+          <button class="option-button" onclick="selectOption(10, 11)">
+            <span>Que ele nunca olhasse pra outra mulher do mesmo jeito que olha pra mim</span>
+          </button>
+          <button class="option-button" onclick="selectOption(10, 11)">
+            <span>Que ele me desejasse exatamente como desejava no início</span>
+          </button>
+          <button class="option-button" onclick="selectOption(10, 11)">
+            <span>Que ele jamais tivesse coragem de me trair</span>
+          </button>
+          <button class="option-button" onclick="selectOption(10, 11)">
+            <span>Que a nossa família ficasse unida pra sempre</span>
+          </button>
+        </div>
+      </div>
+      <div class="screen" id="screen-11">
+        <div class="loading-container">
+          <h2 class="loader-title">Calculando seu nível de risco.</h2>
+
+          <div class="loader-progress-bar">
+            <div class="loader-progress-fill" id="loaderProgressFill"></div>
+          </div>
+          <div class="loader-status-list">
+            <div class="loader-status-item" id="loading-step-1">
+              <div class="loader-spinner" id="spinner-step-1"></div>
+              <div class="loader-check" id="check-step-1" style="display: none;">✓</div>
+              <span>Cruzando suas respostas com mais de 90 mil casos reais.</span>
+            </div>
+
+            <div class="loader-status-item" id="loading-step-2">
+              <div class="loader-spinner" id="spinner-step-2" style="display: none;"></div>
+              <div class="loader-check" id="check-step-2" style="display: none;">✓</div>
+              <span>Comparando o seu relacionamento com o padrão de comportamento que antecede uma traição.</span>
+            </div>
+
+            <div class="loader-status-item" id="loading-step-3">
+              <div class="loader-spinner" id="spinner-step-3" style="display: none;"></div>
+              <div class="loader-check" id="check-step-3" style="display: none;">✓</div>
+              <span>Definindo se você se qualifica para o conteúdo restrito desse diagnóstico.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen" id="screen-12">
+        <div class="result-container">
+          <h2 class="result-title">Seu diagnóstico está quase pronto.</h2>
+          <p class="result-paragraph">Mas antes de eu te mostrar o resultado, preciso te contar duas coisas.</p>
+
+          <p class="result-subhead">A primeira.</p>
+          <p class="result-paragraph">Essa mesma técnica que vai aparecer no seu resultado já foi usada em nomes que talvez você nem imagine.</p>
+          <p class="result-paragraph">Naquele ator que enche capa de revista e finge ser o marido perfeito. Naquele jogador que joga na liga mais cara da Europa, enquanto a esposa posta foto de família todo fim de semana. Naquele cantor que canta amor eterno no palco, mas viaja escondido pelo menos uma vez por mês. Naquele empresário que todo mundo segue no Instagram pelos conselhos de casamento perfeito.</p>
+          <p class="result-paragraph">Eu não vou te dizer quem são. Porque, sendo sincera, nem precisa. Você já está com um nome na cabeça enquanto lê isso.</p>
+          <p class="result-paragraph">E é exatamente por isso que esse conteúdo não pode ficar no ar.</p>
+
+          <p class="result-subhead">A segunda coisa, e essa é mais importante ainda.</p>
+          <p class="result-paragraph">Você nunca vai ver nada disso em vídeo. Not é só porque vídeo vaza mais fácil. É porque vídeo tem rosto, tem voz, tem quarto que pode ser reconhecido. Texto não tem nada disso.</p>
+
+          <p class="result-paragraph">
+            <span class="highlight-yellow">As mulheres que me ajudaram a escrever esse conteúdo vivem de sigilo absoluto.</span>
+          </p>
+
+          <p class="result-paragraph">Se existisse uma gravação com qualquer pista de quem é o homem do outro lado, a carreira dele acaba, e a delas também.</p>
+          <p class="result-paragraph">Por isso elas só aceitaram colocar isso no papel junto comigo. Sem mostrar os rostos, sem voz, sem como provar quem é quem. Só a técnica que aplicamos, exatamente como funciona.</p>
+          <p class="result-paragraph">Seu diagnóstico está pronto.</p>
+          <button class="btn-action pulse-btn" id="btn-final-quiz">Ver Meu Resultado Completo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="tsl" class="tsl-wrapper" style="display: none;">
+    <div class="tsl-container">
+        <div class="tsl-reservation-bar" id="tslReservationBar"><span>Sua vaga está reservada por:</span><strong id="tslCountdown">30:00</strong></div>
+        <section class="tsl-block tsl-alert-copy"><p><strong>OBS:</strong> Por motivos de sigilo pessoal, essa página foi programada para ser visitada <strong>apenas uma única vez, e foram liberados 9 acessos</strong>. Se você sair dela agora, <strong>nunca mais vai conseguir acessá-la de novo. </strong></p></section>
+        <section class="tsl-block tsl-qualification"><p><strong>Você e Mais 9 Mulheres foram qualificadas. 990 mulheres foram desqualificadas.</strong></p></section>
+        <section class="tsl-block"><p>Se você chegou até aqui, se considere uma mulher de sorte. Somente 10 entre 1000 mulheres vão ter acesso ao conteúdo polêmico que você vai ver aqui.</p></section>
+        <section class="tsl-block"><p>O motivo de toda essa exclusividade? Simples...</p></section>
+        <section class="tsl-block"><p>Se essa página se tornar pública, ela provavelmente vai acabar com a maioria dos casamentos das celebridades que você deve conhecer.</p></section>
+        <section class="tsl-block"><p>Pois aqui eu vou te revelar o truque sujo das garotas de programa para manter os homens mais ricos, poderosos e famosos da Tailândia <strong>PAGANDO</strong> por sexo, enquanto a esposa deles implora por atenção e fica frustrada e ansiosa em casa.</p></section>
+        <section class="tsl-block"><p>Então, se você for esperta, vai roubar esse mesmo truque para usar no seu marido, ou no homem que você ama, e ter a certeza de que ele nunca vai te trair, ficando completamente fiel e obcecado por você também.</p></section>
+        <section class="tsl-block"><p>Igual aconteceu com a Maíra Cardi, uma influenciadora brasileira bastante conhecida, que fez o empresário multimilionário Thiago Nigro se separar de um relacionamento de mais de 10 anos.</p></section>
+<figure class="tsl-product-figure"><img src="assets/01.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/02.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>E ainda por cima, apenas 1 mês depois, assumiu um relacionamento com ele. E se casou no mesmo ano, com o regime de comunhão total de bens, onde automaticamente metade do patrimônio dele foi registrado no nome dela.</p></section>
+        <section class="tsl-block"><p><em>(Thiago, 1 mês depois de terminar com Camila e Assumir um relacionamento com Maíra, a mulher que ele usava para trair sua ex-esposa)</em></p></section>
+        <section class="tsl-block"><p>Porém, agora eu me vejo obrigada a te falar que as coisas vão começar a ficar mais picantes e mais polêmicas. Então se prepare para ver coisas que a mídia nunca vai revelar a você.</p></section>
+        <section class="tsl-block"><p>Muito prazer, meu nome é Renata Maciel, e eu sou garota de programa e acompanhante de luxo profissional.</p></section>
+<figure class="tsl-product-figure"><img src="assets/04.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/05.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/06.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Ou seja, eu sou a mulher com quem muitos empresários, artistas e atletas famosos traem as suas esposas.</p></section>
+        <section class="tsl-block"><p>E agora eu vou te ensinar o meu truque mais sujo para manter até mesmo um homem rico, famoso e poderoso totalmente fiel a mim, traindo a esposa dele, me levando para jantar em restaurantes caros e até viajando escondido das esposas deles.</p></section>
+<figure class="tsl-product-figure"><img src="assets/07.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p><em>(Aqui sou eu visitando Las Vegas, a Capital do Entretenimento pela primeira vez, as custas de um Palestrante Motivacional muito famoso da Internet)</em></p></section>
+        <section class="tsl-block"><p><em>(E aqui eu estou visitando os Estados Unidos pela segunda vez, no estado da Califórnia, antes de ir para a Disney, sendo bancada por um Ator da [Ator da Emissora Nacional do País]) </em></p></section>
+        <figure class="tsl-product-figure"><img src="assets/08.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>E olha, deixa eu te contar uma fofoca bem suja antes de você ir mais longe. O que eu vou revelar aqui, eu nunca comentei abertamente. Isso aqui eu nem devia estar te mostrando.</p></section>
+        <section class="tsl-block"><p>Porém, depois que o marido de uma amiga minha, dançarina de um programa de auditório muito famoso, tentou marcar um horário comigo sem saber quem eu era, eu decidi fazer essa página, que fica online somente 1 dia a cada 4 meses, para ensinar 10 mulheres sortudas o principal truque usado por mim e pelas minhas colegas de profissão.</p></section>
+        <section class="tsl-block"><h2 class="tsl-headline"><strong>Aviso:</strong> A partir de agora, o <strong>conteúdo fica extremamente confidencial.</strong> Lembre-se que se você fechar essa página, nunca mais poderá ver ela de novo.</h2></section>
+        <section class="tsl-block"><p>Então, antes de eu te entregar o truque, deixa eu fazer um teste rápido com você, de só 3 perguntas.</p></section>
+        <section class="tsl-block"><p>Levanta o dedo se você já ficou olhando para o celular, esperando uma resposta carinhosa dele que nunca veio ou esperando ele sair do celular e dar atenção a você.</p></section>
+        <section class="tsl-block"><p>Levanta o dedo se você já pegou ele assistindo pornô escondido, e fingiu que não viu, engolindo aquele nó na garganta.</p></section>
+        <section class="tsl-block"><p>Levanta o dedo se você já se perguntou, sozinha no banheiro, se o corpo de outra mulher é melhor que o seu.</p></section>
+        <section class="tsl-block"><p>Se você levantou o dedo para pelo menos uma dessas, fica comigo, porque o que eu vou te mostrar agora foi feito exatamente para mulher como você.</p></section>
+        <section class="tsl-block"><h2 class="tsl-headline"><strong>ENTÃO, QUAL É ESSE TRUQUE? </strong></h2></section>
+        <section class="tsl-block"><p>O truque é dominar a arte do boquete inesquecível.</p></section>
+<figure class="tsl-product-figure"><img src="assets/09.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Igual a Maíra estava fazendo num vídeo confidencial que ela mandou no nosso grupo de acompanhantes de luxo, para dominar a mente e o coração do Thiago enquanto ele ainda estava casado.</p></section>
+<figure class="tsl-product-figure"><img src="assets/10.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><h2 class="tsl-headline">E antes que você pense, o que tem de especial nisso, eu sempre faço ele gozar?</h2></section>
+        <section class="tsl-block"><p>Bom, pois é.</p></section>
+        <section class="tsl-block"><p>Eu sei que isso, para você, pode parecer sinal de que o seu sexo com ele é incrível. Ainda mais porque nós, mulheres, sempre fomos ensinadas que se ele gozou, está ótimo.</p></section>
+        <section class="tsl-block"><p>Mas, meu amor, infelizmente não é bem assim.</p></section>
+        <section class="tsl-block"><p>Da mesma forma que nós fingimos um orgasmo de vez em quando, os homens também conseguem fingir que está tudo bem depois de gozar.</p></section>
+<figure class="tsl-product-figure"><img src="assets/11.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/12.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/13.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>E antes que você pense que isso é falta de putaria sua, deixa eu te tranquilizar agora. Você não fez nada de errado. O problema nunca foi a sua vontade, nem o seu corpo. O problema é que ninguém nunca te ensinou a técnica certa, e isso eu vou corrigir agora.</p></section>
+        <section class="tsl-block"><p>Por isso, para um boquete inesquecível, que faz ele se conectar emocionalmente com você e te tornar a prioridade número um da vida dele, é necessário muito mais do que simplesmente fazer ele gozar. É preciso usar o que eu e minhas colegas chamamos de <strong>EFEITO BOCA DE VELUDO. </strong></p></section>
+        <section class="tsl-block"><p>E aqui está o segredinho sujo por trás desse nome.</p></section>
+        <section class="tsl-block"><p>Presta atenção nessa palavra, <strong>veludo</strong>, porque ela é a chave de tudo que eu vou te ensinar.</p></section>
+        <section class="tsl-block"><p>Uma vagina, um ânus, um corpo, são intercambiáveis no cérebro masculino. Ele troca de posição, troca de mulher, e para o cérebro reprodutor dele, é tudo basicamente a mesma sensação física, só embrulhada em corpos diferentes.</p></section>
+        <section class="tsl-block"><p>Mas a boca não.</p></section>
+        <section class="tsl-block"><p>A boca tem ritmo, pressão, temperatura, saliva, olhar, respiração e o jeito como você engole no final. E essa combinação específica, feita do seu jeito, vira uma espécie de impressão digital sexual na memória dele.</p></section>
+        <section class="tsl-block"><p>É por isso que um homem esquece com qual posição transou na semana passada, mas nunca esquece um boquete que realmente marcou ele.</p></section>
+        <section class="tsl-block"><p>E é exatamente essa marca, esse EFEITO BOCA DE VELUDO, que faz ele eliminar de vez a vontade de procurar prazer em qualquer outra mulher, porque no fundo do cérebro dele, ninguém mais consegue reproduzir aquilo exatamente do mesmo jeito.</p></section>
+        <section class="tsl-block"><p>No nosso grupo de WhatsApp mesmo, as mulheres que tiveram o ego grande demais para aprender essa marca registrada com a gente, acabaram virando piada!</p></section>
+        <section class="tsl-block"><p>Uma delas, por exemplo, foi a Luísa Sonza, uma cantora e influenciadora muito famosa no Brasil, que viu o namorado sendo chupado por outra no banheiro de um bar, porque nunca quis aprender.</p></section>
+<figure class="tsl-product-figure"><img src="assets/14.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Mas a pior, foi a Bruna Biancardi, ex-namorada e agora, atual esposa do Neymar. Nós insistimos para ela aprender com a gente, porque sabíamos que o sexo ia ficar comprometido, e somente o EFEITO BOCA DE VELUDO poderia salvar o relacionamento dela. Só que o egozinho dela falou mais alto da primeira vez, assim como a vontade do Neymar de ser chupado de verdade também…</p></section>
+        <figure class="tsl-product-figure"><img src="assets/15.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>E o resultado todo mundo sabe, ele assumiu publicamente que traiu ela mesmo grávida.</p></section>
+        <section class="tsl-block"><p>Esses são só dois exemplos de milhares que ocorrem no mundo dos famosos. Eu já fui usada para trair cada famosa que você nem imagina.</p></section>
+        <section class="tsl-block"><p>Mas eu quero que você imagine só por um minuto.</p></section>
+        <section class="tsl-block"><p>Se isso acontece com homens que podem escolher a mulher que quiserem para casar, porque eles têm dinheiro, fama e poder.</p></section>
+        <section class="tsl-block"><h2 class="tsl-headline">Imagina só o número de <strong>homens comuns que traem as suas esposas quando têm a chance. </strong></h2></section>
+        <section class="tsl-block"><p>Os próprios dados mostram que 91% dos homens já foram infiéis e traíram suas mulheres, e eles mesmo falam isso na cara dura.</p></section>
+        <section class="tsl-block"><p>E eu acho que se você perguntasse para alguma dessas mulheres antes da traição, &quot;você acha que ele vai te trair&quot;, ela também iria responder, nunca.</p></section>
+        <section class="tsl-block"><p>Só que é exatamente as coisas que pensamos que eles nunca iriam fazer, que eles vão lá e fazem.</p></section>
+        <section class="tsl-block"><p>Então, justamente para evitar que isso aconteça com você, que é uma das 10 sortudas nesse site hoje, eu decidi juntar todas do nosso grupo das top acompanhantes de luxo da Tailândia para escrevermos um guia extremamente prático sobre as nossas técnicas e truques sujos para um <strong>Boquete Inesquecível. </strong></p></section>
+        <section class="tsl-block"><p>Ao ponto de deixar um homem completamente fiel e apaixonado por você, vendo a sua felicidade e a união da família de vocês dois como a prioridade número um da vida dele.</p></section>
+        <section class="tsl-block"><p>E nós decidimos apelidar esse guia de.</p></section>
+        <section class="tsl-block"><h2 class="tsl-headline"><strong>Manual da Fidelidade. </strong></h2></section>
+        <section class="tsl-block"><p>Nele você vai saber exatamente o que eu fiz para fazer homens como esses traírem as suas esposas e ficarem completamente apaixonados e fiéis a mim, me levando com eles para os mais diversos lugares do mundo.</p></section>
+        <section class="tsl-block"><p>Em registros onde o rosto deles não aparece, por sigilo, é claro, você pode ver um pouco das técnicas secretas e mais sujas que você vai receber.</p></section>
+<figure class="tsl-product-figure"><img src="assets/16.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Nesse aqui eu estava com um jogador de futebol tailandês que joga num time gigante da Europa, enquanto a esposa dele cuidava dos dois filhos pequenos em casa.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/17.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>E nele eu apliquei a <strong>Língua Escorregadia</strong>, que faz ele sentir a sua boca macia, suave e sem atrito nenhum, levando ele a explodir de prazer. Você encontra ela no capítulo 4 do Manual.</p></section>
+        <section class="tsl-block"><p>Já nesse dia aqui, eu estava chupando um apresentador de TV muito famoso, que tinha acabado de brigar feio com a esposa e me chamou de urgência para aliviar o estresse e ficar falando mal dela pelas costas.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/17-02.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Como ele estava de saco cheio dela, eu fui logo no <strong>Ponto G Masculino</strong> para fazer ele gozar rapidinho e aliviar de uma vez o estresse. Nesse dia, depois da primeira gozada, nós transamos a noite toda, enquanto ele dava a desculpa de que estava ajudando os amigos.</p></section>
+        <section class="tsl-block"><p>Você encontra tudo sobre o <strong>Ponto G Masculino</strong> no capítulo 2 do Manual.</p></section>
+        <section class="tsl-block"><p>Enquanto aqui eu estava toda animada para chupar um cantor de Luk Thung muito famoso, que estava cansado do trabalho e da rotina de shows e ia me levar para a Europa, com a desculpa de que estava indo a negócios para a esposa.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/18.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>A técnica que eu começo a usar nesse momento, eu chamo de <strong>Marca na Primeira Mordida</strong>, e ela vai ser explicada capítulo por capítulo, no módulo Tudo o Que Você Precisa Saber Para Iniciar um <strong>Boquete Inesquecível. </strong></p></section>
+        <section class="tsl-block"><p>Aqui, eu estava aplicando as <strong>Técnicas Orgásticas Testiculares</strong> junto com mais uma colega, num dono de podcast muito famoso, com milhões de visualizações no YouTube.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/19.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Isso estimula ele a ejacular muito mais, e se você for meio gulosa que nem eu, eu te garanto que você vai amar.</p></section>
+        <section class="tsl-block"><p>Essas Técnicas Orgásticas Testiculares são ensinadas no capítulo 7 do Manual.</p></section>
+        <section class="tsl-block"><p>Por fim, aqui eu estava, junto da amante preferida (amiga da esposa) de um jogador de futebol multicampeão, e ela estava me ajudando a aplicar uma Garganta Profunda que ele ficava maluco para receber.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/20.png" alt="" loading="lazy"></figure>  <!-- ajuste o número se necessário -->
+        <section class="tsl-block"><p>O mais engraçado é que 20 minutos atrás ele tinha acabado de receber um boquete da esposa, mas foi tão ruim que ele deu a desculpa de uma reunião de última hora e veio correndo ser feliz com a gente.</p></section>
+        <section class="tsl-block"><p>E não se preocupe, que mesmo sendo uma técnica avançada, você vai aprender todos os nossos segredos sobre ela no módulo de <strong>Técnicas Avançadas do Manual. </strong></p></section>
+        <section class="tsl-block"><p>Então, me diz uma coisinha.</p></section>
+        <section class="tsl-block"><p>Você está percebendo o poder que o <strong>EFEITO BOCA DE VELUDO </strong>vai te dar nas mãos?</p></section>
+        <section class="tsl-block"><p>Agora deixa eu te contar como esse manual nasceu, porque isso também faz parte do segredinho sujo.</p></section>
+        <section class="tsl-block"><p>Depois que o marido da minha amiga dançarina tentou me procurar sem saber quem eu era, eu fiquei perturbada. Se aconteceu com ela, podia acontecer com qualquer mulher que eu conhecesse.</p></section>
+        <section class="tsl-block"><p>Então eu chamei outras 14 colegas de profissão, de cidades diferentes da Tailândia, e pedi para cada uma escrever, sem filtro, exatamente o que ela faz para deixar um homem rendido.</p></section>
+        <section class="tsl-block"><p>Em 6 semanas, juntamos mais de 12 mil mensagens de voz e texto trocadas entre nós, comparando técnica por técnica, ajeitando o que funcionava e descartando o que não funcionava de verdade.</p></section>
+        <section class="tsl-block"><p>Tivemos 3 madrugadas inteiras só organizando isso em capítulos, porque cada uma de nós tinha um jeito diferente de explicar a mesma coisa, e a gente queria que qualquer mulher, mesmo sem nenhuma experiência, conseguisse aplicar sem travar.</p></section>
+        <section class="tsl-block"><p>E foi assim que nasceu o <strong>Manual da Fidelidade</strong>, com 8 capítulos, indo da base, que é o <strong>EFEITO BOCA DE VELUDO</strong>, até as <strong>Técnicas Avançadas</strong>, que normalmente a gente só ensina para outra colega de profissão, nunca para uma mulher de fora.</p></section>
+        <section class="tsl-block"><p>Agora, o melhor de tudo, é que como nós não temos intenção nenhuma de ter lucro com isso, e queremos apenas começar o ano dando um presentinho para 10 sortudas,</p></section>
+        <section class="tsl-block"><p>revelando sem papas na língua como os homens realmente são e o que faz eles serem fiéis de verdade ou traírem na cara dura.</p></section>
+        <section class="tsl-block"><p>Em vez de cobrar R$250, R$500 ou até R$1.000, que é o que conseguimos pegando o telefone e ligando para algum empresário ou ator famoso, nós só vamos pedir o dinheiro para pagar o programador que está mantendo esse site no ar, até vocês 10 comprarem o Manual.</p></section>
+        <section class="tsl-block"><p>Como o programador cobrou R$390 para manter esse site no ar até as 10 compras, você vai precisar investir apenas R$39,90 para ter acesso aos segredos e técnicas mais sujas do Manual da Fidelidade por completo, agora mesmo.</p></section>
+        <section class="tsl-block"><p>É só clicar no botão abaixo, colocar os seus dados de pagamento, pode ser cartão ou pix, e efetuar o pagamento.</p></section>
+        <section class="tsl-block"><p>O dinheiro vai cair direto na conta do programador, então nós não vamos saber nem o seu nome. E na fatura do cartão também só vai aparecer letras como MDL, nada relacionado ao conteúdo que você vai receber.</p></section>
+        <button class="btn-action pulse-btn" type="button" aria-label="Botão" onclick="window.location.href='http://pay.hotmart.com/'">GARANTA O MANUAL DA FIDELIDADE POR R$39,90</button>
+        <section class="tsl-block"><h2 class="tsl-headline">Agora, se você ainda está se perguntando como o <strong>EFEITO BOCA DE VELUDO</strong> funciona na prática dentro do seu próprio relacionamento, deixa eu te explicar.</h2></section>
+        <section class="tsl-block"><p>Sabe no começo do relacionamento de vocês, onde tudo era mil maravilhas e ele respondia na hora, te levava para sair, falava de você na frente dos amigos e fazia um sexo intenso e cheio de desejo com você?</p></section>
+        <section class="tsl-block"><p>Isso acontecia porque, na cabeça dele, era tudo novo. Cada relação sexual que ele tinha com você era uma novidade para o cérebro dele.</p></section>
+        <section class="tsl-block"><p>E por isso, hormônios como a dopamina, que motiva ele a transar com você, e a ocitocina, que faz ele criar vínculo e paixão por você, estavam mais altos do que nunca.</p></section>
+        <section class="tsl-block"><p>Porém, ao longo do tempo, o relacionamento de vocês deve ter caído um pouco na rotina.</p></section>
+        <section class="tsl-block"><p>Isso é o que os meus clientes mais reclamam. Da monotonia que é a vida deles com a esposa. Que tudo é sempre a mesma coisa.</p></section>
+        <section class="tsl-block"><p>E é exatamente aí que entra a beleza do <strong>EFEITO BOCA DE VELUDO. </strong></p></section>
+        <section class="tsl-block"><p>Porque diferente do sexo comum, que esfria de tão repetido, uma boca treinada com técnica nova consegue recriar aquela sensação de primeira vez, vezes e vezes seguidas, sem nunca virar rotina, simplesmente porque cada detalhe, ritmo, pressão e olhar, pode ser ajustado e reinventado por você.</p></section>
+        <section class="tsl-block"><p>E depois de mais de 5.000 homens casados que já passaram pela minha mão, eu posso te confirmar uma coisa.</p></section>
+        <section class="tsl-block"><p>Não é o corpo que cansa o homem. É a falta de técnica que vira rotina.</p></section>
+        <section class="tsl-block"><p>Isso porque, como você já deve saber, a coisa que um homem mais gosta é sexo. Porém, a grande novidade aqui é que, para eles, <strong>O SEXO VAGINAL E ANAL, SÃO SEMPRE A MESMA COISA! </strong></p></section>
+        <section class="tsl-block"><h2 class="tsl-headline">Quando um homem vê diferentes mulheres de quatro, de ladinho, cavalgando ou até fazendo sexo anal, <strong>para ele é tudo a mesma coisa. </strong></h2></section>
+        <figure class="tsl-product-figure"><img src="assets/20.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/21.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/22.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/23.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>O cérebro irracional e reprodutor dele pensa, que bunda gostosa, e o pênis dele imediatamente fica duro e pronto para ele meter e gozar.</p></section>
+        <section class="tsl-block"><p>Os homens quase sempre ficam de pau duro ao ver uma mulher pelada.</p></section>
+        <section class="tsl-block"><p>Na verdade, muita das vezes é só eu tirar a minha roupa, ficar de quatro, deixar eles meterem e não fazer mais nada, que mesmo assim eles sempre gozam.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/24.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/25.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Repare como eu simplesmente não preciso fazer nada aqui, e eles gozam.</p></section>
+        <section class="tsl-block"><p>Ou seja, se fosse outra mulher no meu lugar,<strong> SERIA A MESMA COISA</strong>, e praticamente não teria diferença alguma.</p></section>
+        <section class="tsl-block"><p>Agora, se eu preciso que um homem fique viciado e fiel a mim, me elogiando toda hora, convidando para jantar em restaurantes incríveis e me levando para viagens fora do país, a única coisa que eu preciso fazer é ativar o <strong>EFEITO BOCA DE VELUDO. </strong></p></section>
+        <section class="tsl-block"><p>E aqui está o porquê.</p></section>
+        <section class="tsl-block"><p>Um boquete é muito mais que um simples movimento de penetração, onde o pênis entra e sai de um buraco, como no sexo anal ou vaginal.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/26.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Nele, os lábios, a língua, a saliva e a garganta entram em ação. Sem contar a sua postura, a forma como você olha e sorri para ele. E até mesmo o que você faz quando ele goza, que é o gatilho que a gente chama de <strong>Marca do Gozo</strong>, e que sela essa memória na cabeça dele de um jeito que nenhuma outra mulher consegue copiar.</p></section>
+        <section class="tsl-block"><p>Esses fatores, que dependem só de você, te dão a habilidade de proporcionar uma experiência nova e única para ele, uma vez após a outra.</p></section>
+        <section class="tsl-block"><p>Fazendo você ter a capacidade de assumir o controle total do que você quer que ele sinta ou não.</p></section>
+        <section class="tsl-block"><p>E por isso que o <strong>Manual da Fidelidade</strong>, onde você domina o <strong>EFEITO BOCA DE VELUDO</strong>, é a chave para manter a sua família com ele unida e feliz até o fim.</p></section>
+        <section class="tsl-block"><p>Assim como aconteceu com a Maíra e o Thiago.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/27.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/28.png" alt="" loading="lazy"></figure>
+        <figure class="tsl-product-figure"><img src="assets/NOME_DA_SUA_IMAGEM.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>E assim como acontece com as pouquíssimas mulheres que já tiveram acesso ao conteúdo do Manual, e relataram que o marido ou namorado.</p></section>
+        <section class="tsl-block tsl-list-line"><p>1. Não recusa mais o sexo, e faz com muito mais desejo e intensidade, dando beijos apaixonados e levando ela a orgasmos que ela nunca tinha experimentado antes.</p></section>
+        <section class="tsl-block tsl-list-line"><p>2. Voltou a responder as mensagens dela na hora e sem ser grosso, sendo até mais carinhoso que o normal.</p></section>
+        <section class="tsl-block tsl-list-line"><p>3. Começou a recusar convites para sair e beber com os amigos, tornando ela a prioridade número um da vida dele.</p></section>
+        <section class="tsl-block tsl-list-line"><p>4. Voltou a parecer o mesmo do início do relacionamento, mostrando mais preocupação, dando mais atenção, dedicando mais tempo a ela e até mesmo planejando viagens de férias..</p></section>
+        <section class="tsl-block"><p>Por isso, se você também quer aproveitar a chance de viver a mesma coisa, e ver todas as suas amigas com inveja do casal que você e seu marido se tornaram, somente agora, antes de você fechar essa página e nunca mais poder ver ela, você pode ser uma das 10 mulheres da Tailândia que vai ganhar esse presentinho de início de ano por apenas R$39,90.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/29.png" alt="" loading="lazy"></figure>
+        <figure class="tsl-product-figure"><img src="assets/29.png" alt="" loading="lazy"></figure>
+        <button class="btn-action pulse-btn" type="button" aria-label="Botão" onclick="window.location.href='http://pay.hotmart.com/'">GARANTA O MANUAL DA FIDELIDADE POR R$39,90</button>
+        <section class="tsl-block"><p>Bom, se você ainda não está decidida por conta de pensamentos bobos e limitantes, eu não podia deixar de comentar com você mais uma coisinha.</p></section>
+        <section class="tsl-block"><p>Porque se você ainda tem inseguranças que são muito comuns mesmo em nós mulheres, do tipo, ah, mas eu sou gorda e feia, por isso meu marido nem transar comigo quer, deixa eu te fazer uma simples pergunta.</p></section>
+        <section class="tsl-block"><h2 class="tsl-headline"><strong>Você acha mesmo normal um homem recusar sexo? </strong></h2></section>
+        <section class="tsl-block"><p>O único motivo dele recusar sexo é porque ele não está gostando dele.</p></section>
+        <section class="tsl-block"><p>Porque, no fundo, quando eles gostam, eles até pagam caro para ter aquela sensação de novo, assim como acontece comigo e com as minhas colegas de profissão.</p></section>
+        <section class="tsl-block"><p>Você mesmo pode se lembrar de um casal que você conhece, em que o homem é muito mais bonito que a mulher, mas mesmo assim está ao lado dela sendo fiel e construindo uma família.</p></section>
+        <section class="tsl-block"><p>O motivo? Agora você já sabe.</p></section>
+        <section class="tsl-block"><p>Um bom boquete é muito mais importante que uma boa aparência.</p></section>
+        <section class="tsl-block"><p>Afinal, todo homem sabe que a aparência dá para melhorar com salão de beleza, procedimentos estéticos e academia. Já uma mulher que domina o <strong>EFEITO BOCA DE VELUDO </strong>é algo raro, único, e que mexe com os pensamentos mais impulsivos dele.</p></section>
+        <section class="tsl-block"><p>Mas sabe da melhor? Os homens também adoram mulheres mais cheinhas, eu estou te falando sério.</p></section>
+        <section class="tsl-block"><h2 class="tsl-headline"><strong>“Ahh Mais Eu Sou Gorda e Feia, Por isso Meu Marido Nem Transar Comigo Quer!” </strong></h2></section>
+        <section class="tsl-block"><p>Até nos vídeos pornôs que eles assistem, existem atrizes plus size reais, com corpos bem distantes do padrão magro de revista, somando milhões de visualizações.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/30.png" alt="" loading="lazy"></figure>
+<figure class="tsl-product-figure"><img src="assets/31.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Todas elas são consideradas “gordas e pouco atraentes&quot; para a maioria das mulheres…</p></section>
+        <section class="tsl-block"><p>Mas se os homens não gostassem de ver elas chupando um pau, você acha mesmo que elas teriam tanta fama e visualizações?</p></section>
+        <section class="tsl-block"><p>Isso é prova de que, na verdade, o que acontece durante o sexo é muito mais importante do que quem ele faz sexo com.</p></section>
+        <section class="tsl-block"><p>Então, para você que é mais cheinha e tem problema com isso, não se preocupe. No fundo, ele só quer sentir a sua marca.</p></section>
+        <section class="tsl-block"><p>Agora, por fim, eu só tenho mais uma coisinha muito importante para te alertar. E que prejudica muito as mulheres que tentam dominar essa arte.</p></section>
+        <section class="tsl-block"><p>Os filmes pornôs.</p></section>
+        <section class="tsl-block"><p>Por favor, pelo seu bem, não vá fechando essa página achando que pode ir ver esses filmes e aprender a chupar ele sozinha.</p></section>
+        <section class="tsl-block"><p>Eu só te mostrei eles aqui para provar que, se os homens assistem, é porque eles sonham em receber um bom boquete, não importando de quem seja. Essa é a chave para fazer um homem fiel.</p></section>
+        <section class="tsl-block"><p>Só que o filme inteiro é projetado para ser visualmente sexy, e o ator que está lá não é pago para sentir prazer, e sim para ficar de pau duro, para que o diretor possa fazer cortes e explorar os melhores ângulos.</p></section>
+        <section class="tsl-block"><p>Ou seja, aquilo não é a vida real, e muitas das posições que você vê ali são extremamente desconfortáveis, e o ator tem que se esforçar muito para fingir prazer.</p></section>
+        <section class="tsl-block"><p>Vai por mim, eu chupo paus de diferentes formas e tamanhos todo santo dia, e sei do que estou falando.</p></section>
+        <section class="tsl-block"><p>Agora, também não é mentira que o seu marido ou namorado busca em outros lugares o que ele não tem em casa com você.</p></section>
+        <section class="tsl-block"><p>E sabe qual o próximo passo? Bom, infelizmente eu tenho que ser honesta aqui.</p></section>
+        <section class="tsl-block"><p>É ele me mandar uma mensagem dessa aqui para mim, ou para uma das minhas milhares de colegas de profissão ao redor da Tailândia, pedindo para marcar um horário.</p></section>
+        <figure class="tsl-product-figure"><img src="assets/32.png" alt="" loading="lazy"></figure>
+        <section class="tsl-block"><p>Já imaginou ver o homem que você tanto ama fazendo isso, enquanto você se esforça para dar amor, carinho e atenção para ele?</p></section>
+        <section class="tsl-block"><p>Essa é uma sensação que nenhuma mulher que realmente ama o seu marido e quer ter uma família unida e fiel merece passar.</p></section>
+        <section class="tsl-block"><p>E por isso, para você garantir que isso nunca aconteça com você, é só aproveitar a chance única e ser uma das 10 mulheres selecionadas neste começo de ano para ter acesso ao Manual da Fidelidade, e assim ativar o EFEITO BOCA DE VELUDO, por apenas.</p></section>
+        <section class="tsl-price"><p><strong>R$39,90. </strong></p></section>
+        <button class="btn-action pulse-btn" type="button" aria-label="Botão" onclick="window.location.href='http://pay.hotmart.com/'">GARANTA O MANUAL DA FIDELIDADE POR R$39,90</button>
+        <div class="faq-block">
+  <div class="faq-question-box">Onde e quando eu vou receber o Manual?</div>
+  <div class="faq-answer-box">O acesso é instantâneo após você finalizar a compra, e vai direto ao seu email. Da mesma forma que acontece quando enviamos para nossas amigas e atrizes que pedem para aprender com a gente também.</div>
+</div>
+        <div class="faq-block">
+  <div class="faq-question-box">Quais são as formas de pagamento?</div>
+  <div class="faq-answer-box">Você pode escolher entre cartão de crédito e pix.</div>
+</div>
+        <div class="faq-block">
+  <div class="faq-question-box">Até quando eu posso realizar a compra?</div>
+  <div class="faq-answer-box">Como você viu, essa página tem informações que de jeito algum podem vazar, e por isso ela está programada para sair do ar assim que você fechar ela. Ou você garante o seu acesso agora, ou nunca mais vai poder acessar essa página, e a sua vaga vai ser passada para outra mulher. Nós, garotas de programa, prezamos muito pela confidencialidade das coisas que te mostramos aqui.</div>
+</div>
+        <figure class="tsl-product-figure"><img src="assets/33.png" alt="" loading="lazy"></figure>
+        <button class="btn-action pulse-btn" type="button" aria-label="Botão" onclick="window.location.href='http://pay.hotmart.com/'">GARANTA O MANUAL DA FIDELIDADE POR R$39,90</button>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="popupModal">
+    <div class="modal-card">
+      <div class="modal-question">Você toparia aprender uma técnica usada por mulheres que convivem de perto com os homens mais cobiçados do país?</div>
+      <div class="modal-buttons">
+        <button class="btn-action" style="margin-top: 0;" onclick="closeModalAndProgress(true)">Sim</button>
+        <button class="option-button" style="justify-content: center; box-shadow: 2px 2px 0px var(--black);" onclick="closeModalAndProgress(false)">Ainda não tenho certeza</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currentScreen = 1;
+    const totalScreens = 12;
+    const progressFill = document.getElementById('progressFill');
+    const liveCounterEl = document.getElementById('liveCounter');
+    const visitorWidget = document.getElementById('visitorWidget');
+    const quizAlertBar = document.getElementById('quizAlertBar');
+    const quizProgressBarContainer = document.getElementById('quizProgressBarContainer');
+    let activeAcessos = 984;
+    setInterval(() => {
+      const diff = Math.floor(Math.random() * 5) - 2;
+      activeAcessos += diff;
+      if (activeAcessos > 996) activeAcessos = 991;
+      if (activeAcessos < 980) activeAcessos = 983;
+      if (liveCounterEl) {
+        liveCounterEl.textContent = activeAcessos;
+      }
+    }, 2800);
+    function showScreen(screenNum) {
+      document.querySelectorAll('.screen').forEach(scr => {
+        scr.classList.remove('active');
+      });
+      const targetScreen = document.getElementById(`screen-${screenNum}`);
+      if (targetScreen) {
+        targetScreen.classList.add('active');
+        currentScreen = screenNum;
+      }
+      if (screenNum === 12 && visitorWidget) {
+        visitorWidget.style.display = 'none';
+      }
+      const progressPercent = (screenNum / totalScreens) * 100;
+      if (progressFill) {
+        progressFill.style.width = `${progressPercent}%`;
+      }
+      window.scrollTo(0, 0);
+      if (screenNum === 11) {
+        runLoadingFlow();
+      }
+    }
+    function nextScreen(screenNum) {
+      showScreen(screenNum);
+    }
+    function selectOption(currentScr, nextScr) {
+      const activeOptions = document.querySelectorAll(`#screen-${currentScr} .option-button`);
+      event.currentTarget.classList.add('clicked');
+      setTimeout(() => {
+        showScreen(nextScr);
+      }, 200);
+    }
+    function runLoadingFlow() {
+      const loaderProgressFill = document.getElementById('loaderProgressFill');
+      const step1 = document.getElementById('loading-step-1');
+      const step2 = document.getElementById('loading-step-2');
+      const step3 = document.getElementById('loading-step-3');
+      const spinner1 = document.getElementById('spinner-step-1');
+      const check1 = document.getElementById('check-step-1');
+      const spinner2 = document.getElementById('spinner-step-2');
+      const check2 = document.getElementById('check-step-2');
+      const spinner3 = document.getElementById('spinner-step-3');
+      const check3 = document.getElementById('check-step-3');
+      loaderProgressFill.style.width = '0%';
+      setTimeout(() => {
+        step1.classList.add('visible', 'active');
+        loaderProgressFill.style.width = '35%';
+      }, 300);
+      setTimeout(() => {
+        spinner1.style.display = 'none';
+        check1.style.display = 'block';
+        step1.classList.remove('active');
+        step2.classList.add('visible', 'active');
+        spinner2.style.display = 'block';
+        loaderProgressFill.style.width = '70%';
+      }, 1500);
+      setTimeout(() => {
+        const modal = document.getElementById('popupModal');
+        if (modal) {
+          modal.style.display = 'flex';
+        }
+      }, 3000);
+    }
+    function closeModalAndProgress(userAccepted) {
+      const modal = document.getElementById('popupModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+      const loaderProgressFill = document.getElementById('loaderProgressFill');
+      const step2 = document.getElementById('loading-step-2');
+      const step3 = document.getElementById('loading-step-3');
+      const spinner2 = document.getElementById('spinner-step-2');
+      const check2 = document.getElementById('check-step-2');
+      const spinner3 = document.getElementById('spinner-step-3');
+      const check3 = document.getElementById('check-step-3');
+      spinner2.style.display = 'none';
+      check2.style.display = 'block';
+      step2.classList.remove('active');
+      step3.classList.add('visible', 'active');
+      spinner3.style.display = 'block';
+      loaderProgressFill.style.width = '100%';
+      setTimeout(() => {
+        spinner3.style.display = 'none';
+        check3.style.display = 'block';
+        step3.classList.remove('active');
+        setTimeout(() => {
+          showScreen(12);
+        }, 800);
+      }, 1500);
+    }
+
+    let tslCountdownInterval = null;
+    let tslStartTime = null;
+    function updateTslCountdown() {
+      const countdown = document.getElementById('tslCountdown');
+      if (!countdown || !tslStartTime) return;
+      const totalSeconds = 30 * 60;
+      const elapsed = Math.floor((Date.now() - tslStartTime) / 1000);
+      const remaining = Math.max(0, totalSeconds - elapsed);
+      const minutes = String(Math.floor(remaining / 60)).padStart(2, '0');
+      const seconds = String(remaining % 60).padStart(2, '0');
+      countdown.textContent = `${minutes}:${seconds}`;
+    }
+    function startTslCountdown() {
+      tslStartTime = Date.now();
+      updateTslCountdown();
+      if (tslCountdownInterval) clearInterval(tslCountdownInterval);
+      tslCountdownInterval = setInterval(updateTslCountdown, 1000);
+    }
+    function showTSL() {
+      fbq('track', 'ViewContent');
+      const quizWrapper = document.querySelector('.app-wrapper');
+      const tsl = document.getElementById('tsl');
+      if (quizWrapper) quizWrapper.style.display = 'none';
+      if (quizAlertBar) quizAlertBar.style.display = 'none';
+      if (quizProgressBarContainer) quizProgressBarContainer.style.display = 'none';
+      const modal = document.getElementById('popupModal');
+      if (modal) modal.style.display = 'none';
+      if (tsl) tsl.style.display = 'block';
+      startTslCountdown();
+      window.scrollTo(0, 0);
+    }
+
+    document.getElementById('btn-final-quiz').addEventListener('click', function() {
+  fbq('track', 'Lead');
+  showTSL();
+});
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"75124c326cb447fe934cde04713ae013","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
